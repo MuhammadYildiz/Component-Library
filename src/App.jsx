@@ -1,11 +1,12 @@
 import { useState } from "react"
+import Carousel from "./components/Carousel"
 import Alert from "./components/Alert"
 import Button from "./components/Button"
 import Modal from "./components/Modal"
 import Accordion from "./components/Accordion"
 import Card from "./components/Card"
 function App() {
-    const [showAlet, setshowAlet] = useState(false)
+    const [showAlert, setshowAlert] = useState(false)
     const [openModal, setopenModal] = useState(false)
     const [openButton, setopenButton] = useState(true)
     const [closeButton, setcloseButton] = useState(false)
@@ -14,7 +15,7 @@ function App() {
     const [accordion2Text, setaccordion2Text] = useState(false)
     const [accordion3Text, setaccordion3Text] = useState(false)
     const onDismiss = () => {
-        setshowAlet(false)
+        setshowAlert(false)
         setopenModal(false)
         setcloseButton(false)
         setopenButton(true)
@@ -26,15 +27,16 @@ function App() {
         setopenButton(false)
     }
     const closeButtonClick = () => {
-        setshowAlet(true)
+        setshowAlert(true)
     }
     return (
         <div className="min-h-[100vh] ">
-            {showAlet &&
+            {showAlert &&
                 <Alert color="alertColor" size="alertSize" onDismiss={onDismiss} title="Are you sure you want to close the modal ?">
-                    <Alert.KepToSee title="keep Seeing" color="kepSeeColor" size="kepSeeSize" onClick={() => setshowAlet(false)} />
+                    <Alert.KepToSee title="keep Seeing" color="kepSeeColor" size="kepSeeSize" onClick={() => setshowAlert(false)} />
                 </Alert>
             }
+            <Carousel/>
             {openButton && <Button title="Open Modal" color="buttonColor" size="buttonSize"
                 onClick={openButtonClick} disabled={disable}
             />}
@@ -50,7 +52,7 @@ function App() {
             {closeButton && <Button.CloseButton title="Close Modal" color="buttonColor" size="buttonSize"
                 onClick={closeButtonClick}
             />}
-            <Accordion  className='bg-cyan-800 m-[10px] my-10 sm:mx-[100px] p-6 rounded-lg'>
+            <Accordion className='bg-cyan-800 m-[10px] my-10 sm:mx-[100px] p-6 rounded-lg'>
                 <Accordion.Panel>
                     <Accordion.Title>
                         <button className="flex justify-between text-xl border-2 border-green-400 border-b-0  p-3 w-full text-white items-center " onClick={() => setaccordion1Text(!accordion1Text)}>
@@ -101,7 +103,7 @@ function App() {
                 </Accordion.Panel>
                 <Accordion.Panel>
                     <Accordion.Title >
-                        <button className={!accordion3Text ? "flex justify-between text-xl border-2 border-green-400 p-3 w-full text-white items-center":"border-b-0 flex justify-between text-xl border-2 border-green-400 p-3 w-full text-white items-center"} onClick={() => setaccordion3Text(!accordion3Text)}>
+                        <button className={!accordion3Text ? "flex justify-between text-xl border-2 border-green-400 p-3 w-full text-white items-center" : "border-b-0 flex justify-between text-xl border-2 border-green-400 p-3 w-full text-white items-center"} onClick={() => setaccordion3Text(!accordion3Text)}>
                             <span>What are the differences between Flowbite and Tailwind UI?</span>
                             {!accordion3Text && <span className="bg-green-400 px-4 py-1 pb-2 rounded-[50%] text-white font-bold "> +</span>}
                             {accordion3Text && <span className="bg-green-400  px-4 pb-1 py-1 rounded-[50%] text-white font-bold  text-3xl"> -</span>}
