@@ -3,11 +3,11 @@ import React from 'react'
 export default function Contact() {
     return (
         <div className=' p-[10px] sm:px-[100px] min-h-[76vh]  '>
-            <div className='bg-cyan-400 mt-20 items-center flex flex-col lg:flex-row justify-around rounded-2xl '>
+            <div className='bg-cyan-400 mt-20 items-center flex flex-col lg:flex-row  justify-around rounded-2xl '>
                 <form className="flex flex-col w-[90%] md:w-1/2 bg-zinc-500 m-6 p-4 text-white items-center ">
                     <div className='w-full text-center'>
                         <div className="mb-2 text-left ml-10 lg:ml-24 text-xl block">
-                            <label htmlFor="email2">
+                            <label htmlFor="email">
                                 <h4>Your email:</h4>
                             </label>
                         </div>
@@ -16,7 +16,6 @@ export default function Contact() {
                             id="email2"
                             type="email"
                             placeholder="name@flowbite.com"
-                            required={true}
                         />
                     </div>
                     <div className='w-full text-center'>
@@ -27,8 +26,9 @@ export default function Contact() {
                         </div>
                         <input
                             className='w-full md:w-[70%] p-2 mb-3'
-                            id="password2"
+                            id="password"
                             type="password"
+                            autoComplete='false'
                             required={true}
                         />
                     </div>
@@ -42,6 +42,7 @@ export default function Contact() {
                             className='w-full md:w-[70%] p-2 mb-3'
                             id="repeat-password"
                             type="password"
+                            autoComplete='false'
                             required={true}
                         />
                     </div>
