@@ -1,8 +1,13 @@
 import React from 'react'
-
+import Avatar from './Avatar'
 export default function About() {
   return (
     <div className='-z-50'>
+      <Avatar
+        alt="Default avatar with alt text"
+        img="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
+        rounded={true}
+      />
       <div className="w-full">
         <div className="py-12">
           <div className="container mx-auto px-4">
