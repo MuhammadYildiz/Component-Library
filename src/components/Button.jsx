@@ -4,7 +4,7 @@ const style = {
         buttonColor: "bg-blue-900 text-white hover:bg-blue-700",
     },
     size: {
-        buttonSize: "flex flex-col px-10 p-3  m-auto  w-[200px]  text-xl rounded-3xl mt-10 mb-10 shadow-slate-600 shadow-lg",
+        buttonSize: "flex flex-col px-10 p-3  m-auto  w-[200px]  text-xl rounded-3xl mt-10 mb-10 shadow-slate-600 shadow-lg ",
     }
 }
 export default function Button(props) {
