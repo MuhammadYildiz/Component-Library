@@ -1,7 +1,5 @@
 import React from 'react'
-import { FcLike } from 'react-icons/fc';
-import { AiOutlineLike } from 'react-icons/ai';
-import { AiOutlineDislike } from 'react-icons/ai';
+
 const style = {
     color: {
         badgeColor: "bg-zinc-600  hover:bg-cyan-900 text-neutral-100  shadow-slate-700 shadow-xl",
@@ -12,19 +10,19 @@ const style = {
     }
 }
 export default function Badges(props) {
-    const { color, size } = props
+    const { color, size,icon1, icon2,icon3 } = props
     const colorClass = style.color[color]
     const sizeClass = style.size[size]
     return (
         <div className={`${colorClass} ${sizeClass}`}>
             <button className=' flex flex-col justify-center items-center text-center'>
-                <AiOutlineDislike /> <span className='text-sm mt-1'>Dislike</span>
+                {icon1} <span className='text-sm mt-1'>Dislike</span>
             </button>
             <button className=' flex flex-col justify-center items-center text-center'> 
-                <AiOutlineLike /><span className='text-sm mt-1'>Like</span>
+               {icon2}<span className='text-sm mt-1'>Like</span>
             </button>
             <button className=' flex flex-col justify-center items-center text-center'>
-                <FcLike /><span className='text-sm mt-1'>Favorite</span>
+                {icon3} <span className='text-sm mt-1'>Favorite</span>
             </button>
         </div>
     )
