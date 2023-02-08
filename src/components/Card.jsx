@@ -1,6 +1,7 @@
 import React from 'react'
 import { BsLink45Deg } from 'react-icons/bs';
 import { BsShare } from 'react-icons/bs';
+
 const style = {
     color: {
         cardStayle: "bg-cyan-500 mx-[10px] sm:mx-[100px] mb-5 pb-1 rounded-3xl shadow-slate-700 shadow-xl "
