@@ -1,6 +1,8 @@
 import React from 'react'
 import Badges from './Badges'
-
+import { FcLike } from 'react-icons/fc';
+import { AiOutlineLike } from 'react-icons/ai';
+import { AiOutlineDislike } from 'react-icons/ai';
 const style = {
     color: {
         modalColor: "bg-zinc-500 text-neutral-100 hover:bg-zinc-600  shadow-slate-700 shadow-xl",
@@ -57,7 +59,11 @@ function Footer(props) {
     const sizeClass = style.size[size]
     return (
         <div className={`${colorClass} ${sizeClass}`}>
-            <Badges color="badgeColor" size="badgeSize" />
+            <Badges color="badgeColor" size="badgeSize" 
+            icon1={<AiOutlineDislike/>}
+            icon2={<AiOutlineLike/>}
+            icon3={<FcLike/>}
+             />
         </div>
     )
 }
