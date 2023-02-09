@@ -3,7 +3,7 @@ import React from 'react'
 export default function Footer(props) {
     const {children} = props
     return (
-        <div className='bg-black text-white flex flex-col sm:flex-row justify-between p-5 items-center bottom-0 sticky'>
+        <div className='bg-emerald-900 text-white flex flex-col sm:flex-row justify-between p-5 items-center bottom-0 sticky'>
             {children}
         </div>
     )
