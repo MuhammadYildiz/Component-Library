@@ -5,6 +5,7 @@ import Button from "./components/Button"
 import Modal from "./components/Modal"
 import Accordion from "./components/Accordion"
 import Card from "./components/Card"
+import Contact from "./components/Contact"
 function App() {
     const [showAlert, setshowAlert] = useState(false)
     const [openModal, setopenModal] = useState(false)
@@ -30,13 +31,13 @@ function App() {
         setshowAlert(true)
     }
     return (
-        <div className="min-h-[100vh] ">
+        <div className="min-h-[100vh]  m-0 p-0  box-border ">
             {showAlert &&
                 <Alert color="alertColor" size="alertSize" onDismiss={onDismiss} title="Are you sure you want to close the modal ?">
                     <Alert.KepToSee title="keep Seeing" color="kepSeeColor" size="kepSeeSize" onClick={() => setshowAlert(false)} />
                 </Alert>
             }
-            <Carousel/>
+            <Carousel />
             {openButton && <Button title="Open Modal" color="buttonColor" size="buttonSize"
                 onClick={openButtonClick} disabled={disable}
             />}
@@ -142,7 +143,7 @@ function App() {
                 </Accordion.Panel>
             </Accordion>
             <Card color="cardStayle" href="https://tailwindcss.com/" src="https://images.wallpaperscraft.com/image/single/chip_processor_circuit_145282_1280x720.jpg" alt="Program Language" />
-
+            <Contact/>
         </div>
     )
 }
