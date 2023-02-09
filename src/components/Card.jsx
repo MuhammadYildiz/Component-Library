@@ -4,7 +4,7 @@ import { BsShare } from 'react-icons/bs';
 
 const style = {
     color: {
-        cardStayle: "bg-cyan-500 mx-[10px] sm:mx-[100px] mb-5 pb-1 rounded-3xl shadow-slate-700 shadow-xl "
+        cardStayle: "bg-cyan-500 mx-[10px] sm:mx-[100px] mb-10 pb-1 rounded-3xl shadow-slate-700 shadow-xl "
     }
 }
 export default function Card(props) {
@@ -27,7 +27,7 @@ export default function Card(props) {
             </div>
 
             <div className=''>
-                <div className="w-full">
+                <div className="w-full ">
                     <div className="mt-12 relative">
                         <div className="relative w-full overflow-hidden">
                             <div>
